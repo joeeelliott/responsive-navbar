@@ -1,0 +1,162 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.surname {
+  color: rgb(0, 150, 255);
+}
+
+.nav-bar {
+  height: 100px;
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+  z-index: 10;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 820px){
+  .nav-bar {
+    padding: 0px 5px;
+  }
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+}
+
+.title, h1 {
+  color: lightslategrey;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a, .toggle-nav-links a {
+  text-decoration: none;
+  color: lightslategrey;
+  font-size: 1.1rem;
+  padding: 0px 6px;
+}
+
+.social-media a, img {
+  margin: 0px;
+  padding: 0px;
+}
+
+.toggle-nav-bar {
+  width: 200px;
+  border-right: 2px darkgrey solid;
+  height: 100vh;
+  background-color: lightgrey;
+  position: absolute; 
+  left: -200px;
+  top: 100px;
+  display: none;
+}
+
+.toggle-nav-links {
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-nav-links a {
+  padding: 10px 10px;
+}
+
+.burger-icon {
+  border: 1px white solid; 
+}
+
+.burger-icon-div {
+  display: none;
+}
+
+@media only screen and (max-width: 768px){
+  .nav-links {
+    display: none;
+  }
+
+  .social-media {
+    display: none;
+  }
+  
+  .burger-icon-div {
+    display: block;
+  }
+
+  @keyframes burgerIconBorder {
+    from { border: 1px solid white; } 
+    to { border: 1px solid rgb(0, 150, 255); }
+  }
+
+  @keyframes burgerIconNoBorder {
+    from { border: 1px solid rgb(0, 150, 255); } 
+    to { border: 1px solid white; }
+  }
+
+  @keyframes rotate180deg {
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(180deg); }
+  }
+
+  @keyframes rotate-180deg {
+    from { transform: rotate(180deg); } 
+    to { transform: rotate(0deg); }
+  }
+
+  @keyframes toggleNavTrue {
+    from { left: -200px; }
+    to { left: 0px; }
+  }
+
+  @keyframes toggleNavFalse {
+    from { left: 0px; }
+    to { left: -200px; }
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .toggle-nav-bar {
+    display: none !important;
+  }
+}
+
+@keyframes onMouseOverToggleNavLinksShiftRight {
+  from { padding-left: 10px; }
+  to { padding-left: 20px; }
+}
+
+@keyframes onMouseOutToggleNavLinksShiftLeft {
+  from { padding-left: 20px; }
+  to { padding-left: 10px; }
+}
+
+@keyframes onMouseOverToggleNavLinksColorChange {
+  from { color: lightslategrey; }
+  to { color: snow; }
+}
+
+@keyframes onMouseOutToggleNavLinksColorChange {
+  from { color: snow; }
+  to { color: lightslategrey; }
+}
+
+@keyframes onMouseOverToggleNavLinksBackgroundColorChange {
+  from { background-color: lightgrey; }
+  to { background-color: rgb(173, 173, 173); }
+}
+
+@keyframes onMouseOutToggleNavLinksBackgroundColorChange {
+  from { background-color: rgb(173, 173, 173); }
+  to { background-color: lightgrey; }
+}
