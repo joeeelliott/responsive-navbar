@@ -8,3 +8,4 @@ Create a responsive navbar that will show the hamburger menu for smaller devices
 * addEventListener()
 * forEach()
 * CSS @keyframes animations
+* @media queries
