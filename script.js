@@ -5,17 +5,16 @@ const navLinks = document.querySelectorAll('.toggle-nav-link');
 let toggle = false;
 
 // fade burgerIcon border in
-burgerIcon.addEventListener('mouseover', () => {
+  burgerIcon.addEventListener('mouseover', () => {
   burgerIcon.style.animation = "burgerIconBorder 1s";
   burgerIcon.style.border = "1px solid rgb(0, 150, 255)";
 });
 
 // fade burgerIcon border out
-burgerIcon.addEventListener('mouseout', () => {
+  burgerIcon.addEventListener('mouseout', () => {
   burgerIcon.style.animation = "burgerIconNoBorder 0.5s";
   burgerIcon.style.border = "1px solid white";
 });
-
 
 burgerIcon.addEventListener('click', () => {
   if(toggle === false){

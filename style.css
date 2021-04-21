@@ -74,7 +74,7 @@ body {
 }
 
 .burger-icon {
-  border: 1px white solid; 
+  border: 1px solid rgb(255, 255, 255); 
 }
 
 .burger-icon-div {
@@ -95,13 +95,13 @@ body {
   }
 
   @keyframes burgerIconBorder {
-    from { border: 1px solid white; } 
+    from { border: 1px solid rgb(255, 255, 255); } 
     to { border: 1px solid rgb(0, 150, 255); }
   }
 
   @keyframes burgerIconNoBorder {
     from { border: 1px solid rgb(0, 150, 255); } 
-    to { border: 1px solid white; }
+    to { border: 1px solid rgb(255, 255, 255); }
   }
 
   @keyframes rotate180deg {
